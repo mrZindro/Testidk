@@ -90,6 +90,8 @@ h1, h2, h3, h4, h5, h6 {
                 flex: 0 0 100%;
         margin: 5px 15px;
         text-shadow: 3px 3px 5px #000; }
+        .mainContainer header .container h1 a:link, .mainContainer header .container h1 a:visited, .mainContainer header .container h1 a:hover, .mainContainer header .container h1 a:active {
+          color: black; }
       .mainContainer header .container nav {
         display: -webkit-box;
         display: -ms-flexbox;
