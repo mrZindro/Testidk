@@ -1,19 +1,33 @@
 @import "NormalizeStyles.scss"
 // Font for H1
 
-.mainContainer
+.trainings
     width: 100%
     height: none
     display: flex
     flex-direction: column
     background-color: #EFCDB8
+    .container
+        @media screen and ( min-width: 767px  )
+            max-width: 750px
+            margin: 0 auto
+        @media screen and ( min-width: 992px  )
+            max-width: 970px
+        @media screen and ( min-width: 1200px )
+            max-width: 100%
+            max-height: 100%
+            margin: 0 auto
     header
         background-color: #7FB5B5
         border-bottom: 2px solid black
+        box-shadow: 0px 5px 10px black
         .container
             display: flex
             flex-direction: column
             justify-content: space-between
+            @media screen and ( min-width: 767px ) //Media for pads
+                display: flex
+                flex-direction: row
             h1
                 letter-spacing: 5px
                 font-size: 25px
@@ -22,6 +36,11 @@
                 text-shadow: 3px 3px 5px #000
                 a:link, a:visited, a:hover, a:active
                     color: black
+                @media screen and ( min-width: 767px ) //Media for pads
+                    flex: 0 0 50%
+                    font-size: 35px
+                @media screen and ( min-width: 1200px ) //Media for big screens
+                    flex: 0 0 auto
             nav
                 display: flex
                 flex-direction: row
@@ -29,10 +48,16 @@
                 justify-content: flex-end
                 align-items: center
                 margin: 0 -5px
+                @media screen and ( min-width: 767px ) //Media for pads
+                    flex: 0 0 50%
+                @media screen and ( min-width: 1200px ) //Media for big screens
+                    flex: 0 0 auto
                 p            
                     font-size: 12px
                     margin: 5px 5px
                     padding: 0 10px 0 0
+                    @media screen and ( min-width: 767px ) //Media for pads
+                        font-size: 20px
                     a:link
                         color: black
                         text-decoration: underline
@@ -42,10 +67,8 @@
                         color: blue
                     a:active
                         color: red
-
                 p:not(:last-child)
                     border-right: 3px solid black
-
     main
         .container
             flex: 1 1 auto
@@ -61,16 +84,39 @@
                 border: 2px solid black
                 border-radius: 10px
                 overflow: hidden
+                @media screen and ( min-width: 767px ) //Media for pads
+                    flex: 1 1 45%
+                @media screen and ( min-width: 992px  ) //Media for laptops
+                    flex: 1 1 45%
+                @media screen and ( min-width: 1200px ) //Media for big screens
+                    flex: 1 1 45%
                 h2
                     text-align: center
                     font-size: 16px
+                    letter-spacing: 5px
+                    text-shadow: 2px 2px 4px black
+                    box-shadow: 0px 5px 8px black
                     padding: 5px 0
                     margin: 0 0 10px 0
                     border-bottom: 1px solid black
                     background-color: yellow
+                    @media screen and ( min-width: 767px ) //Media for pads
+                        font-size: 20px
+                    @media screen and ( min-width: 992px  ) //Media for laptops
+                        font-size: 20px
+                    @media screen and ( min-width: 1200px ) //Media for big screens
+                        font-size: 20px
+
                 ul
                     padding: 0
                     font-size: 14px
+                    @media screen and ( min-width: 767px ) //Media for pads
+                        font-size: 16px
+                    @media screen and ( min-width: 992px  ) //Media for laptops
+                        font-size: 17px
+                    @media screen and ( min-width: 1200px ) //Media for big screens
+                        font-size: 17px
+
                     li 
                         padding: 0 0 0 20px
                         margin: 0 0 15px 0
@@ -97,66 +143,3 @@
             padding: 15px
             ul:last-child
                 text-align: right
-
-@media screen and ( min-width: 767px ) //Media for pads
-    .mainContainer
-        .container
-            max-width: 750px
-            margin: 0 auto
-        header
-            .container
-                display: flex
-                flex-direction: row
-                h1
-                    flex: 0 0 50%
-                    font-size: 35px
-                nav
-                    flex: 0 0 50%
-                    p
-                        font-size: 20px
-        main
-            .container
-                div
-                    flex: 1 1 45%
-                    h2
-                        font-size: 20px
-                    ul
-                        font-size: 16px
-@media screen and ( min-width: 992px  ) //Media for laptops
-    .mainContainer
-        .container
-            max-width: 970px
-        header
-            .container
-                h1
-                nav
-                    p
-        main
-            .container
-                div
-                    flex: 1 1 45%
-                    h2
-                        font-size: 20px
-                    ul
-                        font-size: 17px
-@media screen and ( min-width: 1200px ) //Media for big screens
-    .mainContainer
-        .container
-            max-width: 100%
-            max-height: 100%
-            margin: 0 auto
-        header
-            .container
-                h1
-                    flex: 0 0 auto
-                nav
-                    flex: 0 0 auto
-                    p
-        main
-            .container
-                div
-                    flex: 1 1 45%
-                    h2
-                        font-size: 20px
-                    ul
-                        font-size: 17px
