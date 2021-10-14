@@ -112,6 +112,15 @@ h1, h2, h3, h4, h5, h6 {
           font-size: 12px;
           margin: 5px 5px;
           padding: 0 10px 0 0; }
+          .mainContainer header .container nav p a:link {
+            color: black;
+            text-decoration: underline; }
+          .mainContainer header .container nav p a:visited {
+            color: green; }
+          .mainContainer header .container nav p a:hover {
+            color: blue; }
+          .mainContainer header .container nav p a:active {
+            color: red; }
         .mainContainer header .container nav p:not(:last-child) {
           border-right: 3px solid black; }
   .mainContainer main .container {
@@ -137,14 +146,17 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-box-flex: 1;
           -ms-flex: 1 1 100%;
               flex: 1 1 100%;
-      background-color: blue;
-      margin: 15px 15px 0; }
+      background-color: #B5B8B1;
+      margin: 15px 15px 0;
+      border: 2px solid black;
+      border-radius: 10px;
+      overflow: hidden; }
       .mainContainer main .container div h2 {
         text-align: center;
         font-size: 16px;
         padding: 5px 0;
         margin: 0 0 10px 0;
-        border-bottom: 3px solid black;
+        border-bottom: 1px solid black;
         background-color: yellow; }
       .mainContainer main .container div ul {
         padding: 0;
@@ -205,10 +217,14 @@ h1, h2, h3, h4, h5, h6 {
               flex: 0 0 50%; }
       .mainContainer header .container nav p {
         font-size: 20px; }
-  .mainContainer main .container div h2 {
-    font-size: 20px; }
-  .mainContainer main .container div ul {
-    font-size: 16px; } }
+  .mainContainer main .container div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 45%;
+            flex: 1 1 45%; }
+    .mainContainer main .container div h2 {
+      font-size: 20px; }
+    .mainContainer main .container div ul {
+      font-size: 16px; } }
 @media screen and (min-width: 992px) {
   .mainContainer .container {
     max-width: 970px; }
@@ -222,12 +238,21 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 17px; } }
 @media screen and (min-width: 1200px) {
   .mainContainer .container {
-    max-width: none;
+    max-width: 100%;
+    max-height: 100%;
     margin: 0 auto; }
+  .mainContainer header .container h1 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+  .mainContainer header .container nav {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
   .mainContainer main .container div {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%; }
+        -ms-flex: 1 1 45%;
+            flex: 1 1 45%; }
     .mainContainer main .container div h2 {
       font-size: 20px; }
     .mainContainer main .container div ul {
