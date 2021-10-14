@@ -67,7 +67,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #EFCDB8; }
+  background-color: #EFCDB8;
+  overflow: hidden; }
   @media screen and (min-width: 767px) {
     .trainings .container {
       max-width: 750px;
