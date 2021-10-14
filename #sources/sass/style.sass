@@ -2,11 +2,12 @@
 
 .trainings
     width: 100%
-    height: none
+    height: 100%
     display: flex
     flex-direction: column
     background-color: #EFCDB8
-    overflow: hidden
+    overflow-y: auto
+    overflow-x: hidden
     .container
         @media screen and ( min-width: 767px  )
             max-width: 750px
@@ -15,12 +16,12 @@
             max-width: 970px
         @media screen and ( min-width: 1200px )
             max-width: 100%
-            max-height: 100%
+            max-height: none
             margin: 0 auto
     header
+        flex: 0 0 auto
         background-color: #7FB5B5
         border-bottom: 2px solid black
-        box-shadow: 0px 5px 10px black
         .container
             display: flex
             flex-direction: column
@@ -70,8 +71,9 @@
                 p:not(:last-child)
                     border-right: 3px solid black
     main
+        flex: 1 1 auto
         .container
-            flex: 1 1 auto
+
             display: flex
             flex-direction: raw 
             flex-wrap: wrap
@@ -134,6 +136,7 @@
                 margin: 15px 15px
 
     footer
+        flex: 0 0 auto
         background-color: #7FB5B5
         border-top: 1px solid #000
         .container
