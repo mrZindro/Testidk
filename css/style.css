@@ -119,8 +119,8 @@ h1, h2, h3, h4, h5, h6 {
         @media screen and (min-width: 767px) {
           .trainings header .container h1 {
             -webkit-box-flex: 0;
-                -ms-flex: 0 0 50%;
-                    flex: 0 0 50%;
+                -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
             font-size: 35px; } }
         @media screen and (min-width: 1200px) {
           .trainings header .container h1 {
@@ -148,8 +148,8 @@ h1, h2, h3, h4, h5, h6 {
         @media screen and (min-width: 767px) {
           .trainings header .container nav {
             -webkit-box-flex: 0;
-                -ms-flex: 0 0 50%;
-                    flex: 0 0 50%; } }
+                -ms-flex: 0 0 auto;
+                    flex: 0 0 auto; } }
         @media screen and (min-width: 1200px) {
           .trainings header .container nav {
             -webkit-box-flex: 0;
