@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: 5px 15px;
         text-shadow: 3px 3px 5px #000; }
         .trainings header .container h1 a:link, .trainings header .container h1 a:visited, .trainings header .container h1 a:hover, .trainings header .container h1 a:active {
-          color: black; }
+          color: yellow; }
         @media screen and (min-width: 767px) {
           .trainings header .container h1 {
             -webkit-box-flex: 0;
