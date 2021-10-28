@@ -59,6 +59,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit; }
 
 /*=======================================================*/
+body {
+  padding-top: 60px; }
+  @media screen and (min-width: 767px) {
+    body {
+      padding-top: 47px; } }
+
 .trainings {
   width: 100%;
   height: 100%;
@@ -85,6 +91,10 @@ h1, h2, h3, h4, h5, h6 {
       max-height: none;
       margin: 0 auto; } }
   .trainings header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -94,13 +104,15 @@ h1, h2, h3, h4, h5, h6 {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+          -ms-flex-direction: row;
+              flex-direction: row;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; }
+              justify-content: space-between;
+      height: 60px;
+      padding: 20px 15px; }
       @media screen and (min-width: 767px) {
         .trainings header .container {
           display: -webkit-box;
@@ -109,15 +121,16 @@ h1, h2, h3, h4, h5, h6 {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
               -ms-flex-direction: row;
-                  flex-direction: row; } }
+                  flex-direction: row;
+          height: 47px;
+          padding: 0; } }
       .trainings header .container h1 {
         font-family: "Rubik Mono One", sans-serif;
         letter-spacing: 5px;
         font-size: 25px;
         -webkit-box-flex: 0;
-            -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-        margin: 5px 15px;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
         text-shadow: 3px 3px 5px #000; }
         .trainings header .container h1 a:link, .trainings header .container h1 a:visited, .trainings header .container h1 a:hover, .trainings header .container h1 a:active {
           color: #ffff99; }
@@ -132,36 +145,81 @@ h1, h2, h3, h4, h5, h6 {
             -webkit-box-flex: 0;
                 -ms-flex: 0 0 auto;
                     flex: 0 0 auto; } }
+      .trainings header .container .burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px; }
+        @media screen and (min-width: 767px) {
+          .trainings header .container .burger {
+            display: none; } }
+      .trainings header .container .burger span {
+        position: absolute;
+        background-color: white;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px; }
+      .trainings header .container .burger:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        left: 0; }
+      .trainings header .container .burger:before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 0; }
+      .trainings header .container .burger:after {
+        bottom: 0; }
       .trainings header .container nav {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 100%;
-                flex: 0 0 100%;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        margin: 0 -5px; }
+        position: fixed;
+        top: 62px;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+        -webkit-transition: ease 0.5s;
+        transition: ease 0.5s; }
         @media screen and (min-width: 767px) {
           .trainings header .container nav {
+            margin: 0 -5px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
             -webkit-box-flex: 0;
-                -ms-flex: 0 0 auto;
-                    flex: 0 0 auto; } }
+                -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+            position: static;
+            width: auto;
+            background-color: transparent; }
+            .trainings header .container nav p:not(:last-child) {
+              border-right: 1px solid black; } }
         @media screen and (min-width: 1200px) {
           .trainings header .container nav {
             -webkit-box-flex: 0;
                 -ms-flex: 0 0 auto;
                     flex: 0 0 auto; } }
         .trainings header .container nav p {
-          font-size: 12px;
+          text-align: left;
+          font-size: 25px;
+          line-height: 40px;
           letter-spacing: 1px;
           margin: 5px 5px;
           padding: 0 10px 0 0; }
@@ -177,8 +235,8 @@ h1, h2, h3, h4, h5, h6 {
             color: blue; }
           .trainings header .container nav p a:active {
             color: red; }
-        .trainings header .container nav p:not(:last-child) {
-          border-right: 1px solid black; }
+      .trainings header .container nav.active {
+        right: 0%; }
   .trainings main {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
@@ -292,6 +350,8 @@ h1, h2, h3, h4, h5, h6 {
           -ms-flex-pack: justify;
               justify-content: space-between;
       padding: 15px; }
+      .trainings footer .container img {
+        max-width: 100%; }
       .trainings footer .container ul:last-child {
         text-align: right; }
 
