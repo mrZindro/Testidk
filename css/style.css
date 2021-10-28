@@ -145,7 +145,8 @@ body {
           .trainings header .container h1 {
             -webkit-box-flex: 0;
                 -ms-flex: 0 0 auto;
-                    flex: 0 0 auto; } }
+                    flex: 0 0 auto;
+            padding: 5px 0 0 20px; } }
       .trainings header .container .burger {
         display: block;
         position: relative;
@@ -231,13 +232,15 @@ body {
           font-size: 25px;
           line-height: 30px;
           letter-spacing: 3px;
-          margin: 5px 5px;
+          margin: 0px 5px;
           padding: 20px 10px 0 60px;
           position: relative; }
           @media screen and (min-width: 767px) {
             .trainings header .container nav p {
               font-size: 20px;
-              text-align: right; } }
+              text-align: right;
+              padding: 0 10px;
+              line-height: 0; } }
           .trainings header .container nav p a:link {
             color: black;
             text-decoration: underline; }
@@ -327,7 +330,7 @@ body {
           text-align: center;
           font-size: 20px;
           letter-spacing: 5px;
-          text-shadow: 2px 2px 4px black;
+          text-shadow: 2px 2px 8px black;
           -webkit-box-shadow: 0px 5px 8px black;
                   box-shadow: 0px 5px 8px black;
           padding: 5px 0;
@@ -345,7 +348,7 @@ body {
               font-size: 25px; } }
         .trainings main .container div ul {
           padding: 0; }
-          @media screenFFCF48 and (min-width: 767px) {
+          @media screen and (min-width: 767px) {
             .trainings main .container div ul {
               font-size: 20px; } }
           @media screen and (min-width: 992px) {
