@@ -1,5 +1,5 @@
 // Font for shedule
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Merriweather:wght@700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap')
 // Font for h1
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap')
 
@@ -41,7 +41,7 @@ body
             flex-direction: row
             justify-content: space-between
             height: 60px
-            padding: 20px 15px
+            padding: 18px 15px
             @media screen and ( min-width: 767px ) //Media for pads
                 display: flex
                 flex-direction: row
@@ -50,7 +50,7 @@ body
             h1
                 font-family: 'Rubik Mono One', sans-serif   
                 letter-spacing: 5px
-                font-size: 25px
+                font-size: 30px
                 flex: 0 0 auto
                 text-shadow: 3px 3px 5px #000
                 a:link, a:visited, a:hover, a:active
@@ -58,6 +58,7 @@ body
                 @media screen and ( min-width: 767px ) //Media for pads
                     flex: 0 0 auto
                     font-size: 35px
+                    padding: 5px 0 0 0
                 @media screen and ( min-width: 1200px ) //Media for big screens
                     flex: 0 0 auto
             .burger
@@ -65,6 +66,7 @@ body
                 position: relative
                 width: 30px
                 height: 20px
+                cursor: grab
                 @media screen and ( min-width: 767px )
                     display: none
             .burger span
@@ -92,13 +94,14 @@ body
             .burger:after
                 bottom: 0
             nav
+                font-family: 'Oswald', sans-serif
                 position: fixed
                 top: 62px
                 right: -100%
                 width: 100%
                 height: 100%
-                background-color: yellow
-                transition: ease 0.5s
+                background-color: rgba(110,81,96,0.9)
+                transition: right ease 0.5s,
                 @media screen and ( min-width: 767px ) //Media for pads
                     margin: 0 -5px
                     display: flex
@@ -156,7 +159,7 @@ body
                 @media screen and ( min-width: 1200px ) //Media for big screens
                     flex: 1 1 45%
                 h2
-                    font-family: 'Merriweather', serif
+                    font-family: 'Oswald', sans-serif
                     text-align: center
                     font-size: 20px
                     letter-spacing: 5px
@@ -172,7 +175,6 @@ body
                         font-size: 20px
                     @media screen and ( min-width: 1200px ) //Media for big screens
                         font-size: 25px
-
                 ul
                     padding: 0
                     @media screenFFCF48 and ( min-width: 767px ) //Media for pads
@@ -183,9 +185,8 @@ body
                         font-size: 20px
 
                     li
-                        font-family: 'Amatic SC', cursive
-                        text-transform: uppercase
-                        letter-spacing: 4px
+                        font-family: 'Oswald', sans-serif
+                        letter-spacing: 2px
                         font-size: 20px
                         padding: 0 0 0 25px
                         margin: 0 0 15px 0
