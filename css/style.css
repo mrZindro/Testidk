@@ -76,7 +76,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #EFCDB8;
-  overflow-y: auto;
+  overflow-y: visible;
   overflow-x: hidden; }
   @media screen and (min-width: 767px) {
     .trainings .container {
