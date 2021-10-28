@@ -123,12 +123,14 @@ body
                 p
                     text-align: left      
                     font-size: 25px
-                    line-height: 40px
-                    letter-spacing: 1px
+                    line-height: 30px
+                    letter-spacing: 3px
                     margin: 5px 5px
-                    padding: 0 10px 0 0
+                    padding: 20px 10px 0 60px
+                    position: relative
                     @media screen and ( min-width: 767px ) //Media for pads
                         font-size: 20px
+                        text-align: right
                     a:link
                         color: black
                         text-decoration: underline
@@ -138,6 +140,17 @@ body
                         color: blue
                     a:active
                         color: red
+                p:before
+                    position: absolute
+                    top: 35px
+                    left: 20px
+                    content: ''
+                    width: 10px
+                    height: 10px
+                    background-color: #F5F5DC
+                    border-radius: 50%
+                    @media screen and ( min-width: 767px ) //Media for pads
+                        background-color: transparent
             nav.active
                 right: 0%
             .burger.active span
