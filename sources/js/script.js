@@ -23,8 +23,8 @@ function change(e) {
         let clickedItem = e.target.tagName;
         console.log('Hello ' + clickedItem);
         if (e.target.tagName == 'LI') {
-            let newContent = prompt('Enter new content: ....');
-            if (newContent) {
+            let newContent = prompt('Enter new content: ....', e.target.textContent);
+            if (newContent !== null && newContent !== undefined) {
                 localStorage.setItem(e.target.className, newContent);
                 }
                 let targetText = e.target.textContent;
