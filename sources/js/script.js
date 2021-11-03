@@ -22,6 +22,10 @@ function change(e) {
     if (e.target != e.currentTarget) {
         let clickedItem = e.target.tagName;
         console.log('Hello ' + clickedItem);
+        if (e.target.tagName == 'H2') {
+            e.target.parentNode.classList.toggle('active')
+            localStorage.clear();
+        }
         if (e.target.tagName == 'LI') {
             let newContent = prompt('Enter new content: ....', e.target.textContent);
             if (newContent !== null && newContent !== undefined) {
@@ -34,9 +38,7 @@ function change(e) {
             }
         }
         // для слайдера
-        if (e.target.tagName == 'H2') {
-            e.target.parentNode.classList.toggle('active')
-        }
+
     
     e.stopPropagation();
 }
