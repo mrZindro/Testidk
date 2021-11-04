@@ -183,6 +183,7 @@ body
                 border: 2px solid black
                 border-radius: 10px
                 overflow: hidden
+                position: relative
                 @media screen and ( min-width: 767px ) //Media for pads
                     flex: 1 1 45%
                 @media screen and ( min-width: 992px  ) //Media for laptops
@@ -231,6 +232,30 @@ body
                         background-size: 15px
                 ul:last-child
                     padding: 5px 15px 0 15px
+                .remover
+                    position: absolute
+                    top: 35px
+                    right: 0
+                    width: 30px
+                    height: 30px
+                .remover:after
+                    content: ''
+                    width: 30px
+                    height: 4px
+                    background-color: #91703f
+                    position: absolute
+                    left: -2px
+                    bottom: 11px
+                    transform: rotate(-45deg)
+                .remover:before   
+                    content: ''
+                    width: 30px
+                    height: 4px
+                    background-color: #91703f
+                    position: absolute
+                    left: -2px
+                    top: 11px
+                    transform: rotate(45deg)
             div:last-child
                 margin: 15px 15px
 

@@ -19,23 +19,33 @@ for (let i = 0; i < listItems.length; i++) {
     }
 }
 function change(e) {
+    console.log(e.target.tagName)
     if (e.target != e.currentTarget) {
         let clickedItem = e.target.tagName;
-        console.log('Hello ' + clickedItem);
+        if (e.target.className == 'remover') {
+            // Чистит день недели
+            e.target.classList.add('active');
+            let localListItems = document.querySelectorAll('div.active + ul li');
+            for (let i = 0; i < localListItems.length; i++) {
+                localStorage.removeItem(localListItems[i].className);
+                location.reload();
+                console.log(localListItems[i])
+            }
+            e.target.classList.remove('active');
+        }
         if (e.target.tagName == 'H2') {
-            e.target.parentNode.classList.toggle('active')
-            localStorage.clear();
+            e.target.parentNode.classList.toggle('active');
         }
         if (e.target.tagName == 'LI') {
             let newContent = prompt('Enter new content: ....', e.target.textContent);
             if (newContent !== null && newContent !== undefined) {
                 localStorage.setItem(e.target.className, newContent);
-                }
                 let targetText = e.target.textContent;
                 e.target.textContent = newContent;
-            } else {
-                alert('You are wrong!')
-            }
+                } else {
+                    alert('You are wrong!')
+                }
+            } 
         }
         // для слайдера
 

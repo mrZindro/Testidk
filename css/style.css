@@ -309,7 +309,8 @@ body {
         margin: 15px 15px 0;
         border: 2px solid black;
         border-radius: 10px;
-        overflow: hidden; }
+        overflow: hidden;
+        position: relative; }
         @media screen and (min-width: 767px) {
           .trainings main .container div {
             -webkit-box-flex: 1;
@@ -373,6 +374,32 @@ body {
             background-size: 15px; }
         .trainings main .container div ul:last-child {
           padding: 5px 15px 0 15px; }
+        .trainings main .container div .remover {
+          position: absolute;
+          top: 35px;
+          right: 0;
+          width: 30px;
+          height: 30px; }
+        .trainings main .container div .remover:after {
+          content: "";
+          width: 30px;
+          height: 4px;
+          background-color: #91703f;
+          position: absolute;
+          left: -2px;
+          bottom: 11px;
+          -webkit-transform: rotate(-45deg);
+                  transform: rotate(-45deg); }
+        .trainings main .container div .remover:before {
+          content: "";
+          width: 30px;
+          height: 4px;
+          background-color: #91703f;
+          position: absolute;
+          left: -2px;
+          top: 11px;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg); }
       .trainings main .container div:last-child {
         margin: 15px 15px; }
   .trainings footer {
