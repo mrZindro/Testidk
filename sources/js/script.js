@@ -46,13 +46,10 @@ function change(e) {
                 let targetText = e.target.textContent;
                 e.target.textContent = newContent;
                 } else {
-                    alert('You are wrong!')
+                    alert('Ты че пес!')
                 }
             } 
         }
-        // для слайдера
-
-    
     e.stopPropagation();
 }
 
@@ -61,4 +58,6 @@ days[now.getDay()-1].parentNode.classList.toggle('active');
 days[now.getDay()-1].classList.toggle('active');
 days[now.getDay()-1].style.backgroundColor = '#8DB600';
 
-document.querySelector('.time').textContent = `Сегодня ${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}, ${days[now.getDay()-1].textContent}`
+document.querySelector('.time').textContent = 
+    `Сегодня ${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}
+    , ${days[now.getDay()-1].textContent}`;
