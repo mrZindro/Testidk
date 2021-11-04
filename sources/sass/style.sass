@@ -175,7 +175,7 @@ body
             flex-direction: raw 
             flex-wrap: wrap
             justify-content: flex-start
-            align-items: stretch
+            align-items: baseline
             div
                 flex: 1 1 100%
                 background-color: rgba(181,184,177, 0.5 )
@@ -184,6 +184,8 @@ body
                 border-radius: 10px
                 overflow: hidden
                 position: relative
+                ul, .remover
+                    display: none
                 @media screen and ( min-width: 767px ) //Media for pads
                     flex: 1 1 45%
                 @media screen and ( min-width: 992px  ) //Media for laptops
@@ -258,7 +260,9 @@ body
                     transform: rotate(45deg)
             div:last-child
                 margin: 15px 15px
-
+            div.active
+                ul, .remover
+                    display: block
     footer
         flex: 0 0 auto
         background-color: #7FB5B5

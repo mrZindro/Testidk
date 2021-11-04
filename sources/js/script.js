@@ -33,6 +33,7 @@ function change(e) {
             }
             e.target.classList.remove('active');
         }
+        // спойлер сука
         if (e.target.tagName == 'H2') {
             e.target.parentNode.classList.toggle('active');
         }

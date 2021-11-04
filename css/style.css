@@ -298,9 +298,9 @@ body {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      -webkit-box-align: stretch;
-          -ms-flex-align: stretch;
-              align-items: stretch; }
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline; }
       .trainings main .container div {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 100%;
@@ -311,6 +311,8 @@ body {
         border-radius: 10px;
         overflow: hidden;
         position: relative; }
+        .trainings main .container div ul, .trainings main .container div .remover {
+          display: none; }
         @media screen and (min-width: 767px) {
           .trainings main .container div {
             -webkit-box-flex: 1;
@@ -402,6 +404,8 @@ body {
                   transform: rotate(45deg); }
       .trainings main .container div:last-child {
         margin: 15px 15px; }
+      .trainings main .container div.active ul, .trainings main .container div.active .remover {
+        display: block; }
   .trainings footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
