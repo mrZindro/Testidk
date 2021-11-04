@@ -8,7 +8,7 @@ function burgerMenu () {
     bgMenu.classList.toggle('active');
 }
 
-let mainContainer = document.querySelector('main div');
+let mainContainer = document.querySelector('main .container');
 mainContainer.addEventListener('click', change, false);
 
 
@@ -29,7 +29,7 @@ function change(e) {
             let localListItems = document.querySelectorAll('div.active + ul li');
             for (let i = 0; i < localListItems.length; i++) {
                 localStorage.removeItem(localListItems[i].className);
-                // location.reload();
+                location.reload();
             } document.querySelector('div.active ul').style.display = 'none';
             document.querySelector('div.active ul').style.display = 'block';
             e.target.classList.remove('active');
@@ -58,4 +58,7 @@ function change(e) {
 
 let days = document.querySelectorAll('main .container h2')
 console.log(days);
-days[now.getDay()-1].parentNode.classList.toggle('active')
+days[now.getDay()-1].parentNode.classList.toggle('active');
+days[now.getDay()-1].classList.toggle('active');
+
+document.querySelector('.time').textContent = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}, ${days[now.getDay()-1].textContent}`
