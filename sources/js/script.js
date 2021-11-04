@@ -61,4 +61,4 @@ console.log(days);
 days[now.getDay()-1].parentNode.classList.toggle('active');
 days[now.getDay()-1].classList.toggle('active');
 
-document.querySelector('.time').textContent = `${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}, ${days[now.getDay()-1].textContent}`
+document.querySelector('.time').textContent = `Сегодня ${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}, ${days[now.getDay()-1].textContent}`
