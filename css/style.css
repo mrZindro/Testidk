@@ -99,7 +99,8 @@ body {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     background-color: #7FB5B5;
-    border-bottom: 2px solid black; }
+    border-bottom: 2px solid black;
+    z-index: 1; }
     .trainings header .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -263,7 +264,8 @@ body {
             .trainings header .container nav p:before {
               background-color: transparent; } }
       .trainings header .container nav.active {
-        right: 0%; }
+        right: 0%;
+        z-index: 1; }
       .trainings header .container .burger.active span {
         -webkit-transform: scale(0);
                 transform: scale(0);
@@ -310,7 +312,8 @@ body {
         border: 2px solid black;
         border-radius: 10px;
         overflow: hidden;
-        position: relative; }
+        position: relative;
+        z-index: 0; }
         .trainings main .container div ul, .trainings main .container div .remover {
           display: none; }
         @media screen and (min-width: 767px) {
