@@ -1,5 +1,6 @@
 'use strict';
 
+let now = new Date; // today date
 let bgMenu = document.querySelector('.burger')
 bgMenu.addEventListener('click', burgerMenu, true);
 function burgerMenu () {
@@ -28,14 +29,15 @@ function change(e) {
             let localListItems = document.querySelectorAll('div.active + ul li');
             for (let i = 0; i < localListItems.length; i++) {
                 localStorage.removeItem(localListItems[i].className);
-                location.reload();
-                console.log(localListItems[i])
-            }
+                // location.reload();
+            } document.querySelector('div.active ul').style.display = 'none';
+            document.querySelector('div.active ul').style.display = 'block';
             e.target.classList.remove('active');
         }
         // спойлер сука
         if (e.target.tagName == 'H2') {
             e.target.parentNode.classList.toggle('active');
+            e.target.classList.toggle('active')
         }
         if (e.target.tagName == 'LI') {
             let newContent = prompt('Enter new content: ....', e.target.textContent);
@@ -53,3 +55,7 @@ function change(e) {
     
     e.stopPropagation();
 }
+
+let days = document.querySelectorAll('main .container h2')
+console.log(days);
+days[now.getDay()-1].parentNode.classList.toggle('active')
