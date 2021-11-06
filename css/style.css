@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 /*===================Reset_Styles=========================*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -60,438 +59,191 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit; }
 
 /*=======================================================*/
-body {
-  padding-top: 60px; }
-  @media screen and (min-width: 767px) {
-    body {
-      padding-top: 47px; } }
-
-.trainings {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #EFCDB8;
-  overflow-y: visible;
-  overflow-x: hidden; }
-  @media screen and (min-width: 767px) {
-    .trainings .container {
-      max-width: 750px;
-      margin: 0 auto; } }
-  @media screen and (min-width: 992px) {
-    .trainings .container {
-      max-width: 970px; } }
-  @media screen and (min-width: 1200px) {
-    .trainings .container {
-      max-width: 100%;
-      max-height: none;
-      margin: 0 auto; } }
-  .trainings header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    background-color: #7FB5B5;
-    border-bottom: 2px solid black;
-    z-index: 1; }
-    .trainings header .container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      height: 60px;
-      padding: 18px 15px; }
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+  main .time {
+    text-align: right;
+    margin: 20px 20px 20px 0;
+    font-size: 40px; }
+  main .mainContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: raw;
+            flex-direction: raw;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    border-top: 5px solid black; }
+    main .mainContainer div {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 100%;
+              flex: 1 1 100%;
+      background-color: rgba(181, 184, 177, 0.5);
+      margin: 15px 15px 0;
+      border: 2px solid black;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      z-index: 0; }
+      main .mainContainer div ul, main .mainContainer div .remover {
+        display: none; }
       @media screen and (min-width: 767px) {
-        .trainings header .container {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: horizontal;
+        main .mainContainer div {
+          -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
-              -ms-flex-direction: row;
-                  flex-direction: row;
-          height: 47px;
-          padding: 0; } }
-      .trainings header .container h1 {
-        font-family: "Rubik Mono One", sans-serif;
-        letter-spacing: 5px;
-        font-size: 30px;
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
-        text-shadow: 3px 3px 5px #000; }
-        .trainings header .container h1 a:link, .trainings header .container h1 a:visited, .trainings header .container h1 a:hover, .trainings header .container h1 a:active {
-          color: #ffff99; }
+              -ms-flex-flow: wrap column;
+                  flex-flow: wrap column;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 100%;
+                  flex: 1 1 100%; } }
+      @media screen and (min-width: 1200px) {
+        main .mainContainer div {
+          margin: 15px auto 0;
+          max-width: 70%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 70%;
+                  flex: 1 1 70%; } }
+      main .mainContainer div h2 {
+        font-family: "Pacifico", cursive;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 10px;
+        -webkit-box-shadow: 0px 5px 8px black;
+                box-shadow: 0px 5px 8px black;
+        padding: 5px 0;
+        margin: 0 0 10px 0;
+        border-bottom: 1px solid black;
+        background-color: rgba(255, 207, 72, 0.9);
+        position: relative; }
         @media screen and (min-width: 767px) {
-          .trainings header .container h1 {
-            -webkit-box-flex: 0;
-                -ms-flex: 0 0 auto;
-                    flex: 0 0 auto;
-            font-size: 35px;
-            padding: 5px 0 0 0; } }
+          main .mainContainer div h2 {
+            font-size: 20px; } }
+        @media screen and (min-width: 992px) {
+          main .mainContainer div h2 {
+            font-size: 20px; } }
         @media screen and (min-width: 1200px) {
-          .trainings header .container h1 {
-            -webkit-box-flex: 0;
-                -ms-flex: 0 0 auto;
-                    flex: 0 0 auto;
-            padding: 5px 0 0 20px; } }
-      .trainings header .container .burger {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 20px;
-        cursor: -webkit-grab;
-        cursor: grab; }
-        @media screen and (min-width: 767px) {
-          .trainings header .container .burger {
-            display: none; } }
-      .trainings header .container .burger span {
-        position: absolute;
-        background-color: white;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        top: 9px;
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
-      .trainings header .container .burger:after {
+          main .mainContainer div h2 {
+            font-size: 25px; } }
+      main .mainContainer div h2:before {
         content: "";
-        width: 100%;
-        height: 2px;
-        background-color: white;
         position: absolute;
-        left: 0;
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
-      .trainings header .container .burger:before {
+        background-color: #000;
+        width: 10px;
+        height: 2px;
+        top: 15px;
+        left: 20px;
+        -webkit-transform: rotate(30deg);
+                transform: rotate(30deg);
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear; }
+      main .mainContainer div h2:after {
         content: "";
-        width: 100%;
-        height: 2px;
-        background-color: white;
         position: absolute;
-        top: 0;
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
-      .trainings header .container .burger:after {
-        bottom: 0; }
-      .trainings header .container nav {
-        font-family: "Oswald", sans-serif;
-        position: fixed;
-        top: 62px;
-        right: -100%;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(110, 81, 96, 0.9);
-        -webkit-transition: right ease 0.5s;
-        transition: right ease 0.5s; }
+        background-color: #000;
+        width: 10px;
+        height: 2px;
+        top: 15px;
+        left: 27.5px;
+        -webkit-transform: rotate(-30deg);
+                transform: rotate(-30deg);
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear; }
+      main .mainContainer div h2.active::before {
+        -webkit-transform: rotate(-30deg);
+                transform: rotate(-30deg); }
+      main .mainContainer div h2.active::after {
+        -webkit-transform: rotate(30deg);
+                transform: rotate(30deg); }
+      main .mainContainer div ul {
+        padding: 0; }
         @media screen and (min-width: 767px) {
-          .trainings header .container nav {
-            margin: 0 -5px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-            -webkit-box-flex: 0;
-                -ms-flex: 0 0 100%;
-                    flex: 0 0 100%;
-            -webkit-box-pack: end;
-                -ms-flex-pack: end;
-                    justify-content: flex-end;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-            -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
-            position: static;
-            width: auto;
-            background-color: transparent; }
-            .trainings header .container nav p:not(:last-child) {
-              border-right: 1px solid black; } }
+          main .mainContainer div ul {
+            font-size: 20px; } }
+        @media screen and (min-width: 992px) {
+          main .mainContainer div ul {
+            font-size: 20px; } }
         @media screen and (min-width: 1200px) {
-          .trainings header .container nav {
-            -webkit-box-flex: 0;
-                -ms-flex: 0 0 auto;
-                    flex: 0 0 auto; } }
-        .trainings header .container nav p {
-          text-align: left;
-          font-size: 25px;
-          line-height: 30px;
-          letter-spacing: 3px;
-          margin: 0px 5px;
-          padding: 20px 10px 0 60px;
-          position: relative; }
-          @media screen and (min-width: 767px) {
-            .trainings header .container nav p {
-              font-size: 20px;
-              text-align: right;
-              padding: 0 10px;
-              line-height: 0; } }
-          .trainings header .container nav p a:link {
-            color: black;
-            text-decoration: underline; }
-          .trainings header .container nav p a:visited {
-            color: pink; }
-          .trainings header .container nav p a:hover {
-            color: blue; }
-          .trainings header .container nav p a:active {
-            color: red; }
-        .trainings header .container nav p:before {
-          position: absolute;
-          top: 35px;
-          left: 20px;
-          content: "";
-          width: 10px;
-          height: 10px;
-          background-color: #F5F5DC;
-          border-radius: 50%; }
-          @media screen and (min-width: 767px) {
-            .trainings header .container nav p:before {
-              background-color: transparent; } }
-      .trainings header .container nav.active {
-        right: 0%;
-        z-index: 1; }
-      .trainings header .container .burger.active span {
-        -webkit-transform: scale(0);
-                transform: scale(0);
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
-      .trainings header .container .burger.active:before {
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-        top: 10px;
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
-      .trainings header .container .burger.active:after {
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-        top: 10px;
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
-  .trainings main {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto; }
-    .trainings main .time {
-      text-align: right;
-      margin: 20px 20px 20px 0;
-      font-size: 40px; }
-    .trainings main .container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: raw;
-              flex-direction: raw;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      -webkit-box-align: baseline;
-          -ms-flex-align: baseline;
-              align-items: baseline;
-      border-top: 5px solid black; }
-      .trainings main .container div {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 1 100%;
-                flex: 1 1 100%;
-        background-color: rgba(181, 184, 177, 0.5);
-        margin: 15px 15px 0;
-        border: 2px solid black;
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
-        z-index: 0; }
-        .trainings main .container div ul, .trainings main .container div .remover {
-          display: none; }
-        @media screen and (min-width: 767px) {
-          .trainings main .container div {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-flow: wrap column;
-                    flex-flow: wrap column;
-            -webkit-box-flex: 1;
-                -ms-flex: 1 1 100%;
-                    flex: 1 1 100%; } }
-        @media screen and (min-width: 1200px) {
-          .trainings main .container div {
-            margin: 15px auto 0;
-            max-width: 70%;
-            -webkit-box-flex: 1;
-                -ms-flex: 1 1 70%;
-                    flex: 1 1 70%; } }
-        .trainings main .container div h2 {
-          font-family: "Pacifico", cursive;
-          text-align: center;
+          main .mainContainer div ul {
+            font-size: 20px; } }
+        main .mainContainer div ul li {
+          font-family: "Oswald", sans-serif;
+          letter-spacing: 2px;
           font-size: 20px;
-          letter-spacing: 10px;
-          -webkit-box-shadow: 0px 5px 8px black;
-                  box-shadow: 0px 5px 8px black;
-          padding: 5px 0;
-          margin: 0 0 10px 0;
-          border-bottom: 1px solid black;
-          background-color: rgba(255, 207, 72, 0.9);
-          position: relative; }
-          @media screen and (min-width: 767px) {
-            .trainings main .container div h2 {
-              font-size: 20px; } }
-          @media screen and (min-width: 992px) {
-            .trainings main .container div h2 {
-              font-size: 20px; } }
-          @media screen and (min-width: 1200px) {
-            .trainings main .container div h2 {
-              font-size: 25px; } }
-        .trainings main .container div h2:before {
-          content: "";
-          position: absolute;
-          background-color: #000;
-          width: 10px;
-          height: 2px;
-          top: 15px;
-          left: 20px;
-          -webkit-transform: rotate(30deg);
-                  transform: rotate(30deg);
-          -webkit-transition: all 0.3s linear;
-          transition: all 0.3s linear; }
-        .trainings main .container div h2:after {
-          content: "";
-          position: absolute;
-          background-color: #000;
-          width: 10px;
-          height: 2px;
-          top: 15px;
-          left: 27.5px;
-          -webkit-transform: rotate(-30deg);
-                  transform: rotate(-30deg);
-          -webkit-transition: all 0.3s linear;
-          transition: all 0.3s linear; }
-        .trainings main .container div h2.active::before {
-          -webkit-transform: rotate(-30deg);
-                  transform: rotate(-30deg); }
-        .trainings main .container div h2.active::after {
-          -webkit-transform: rotate(30deg);
-                  transform: rotate(30deg); }
-        .trainings main .container div ul {
-          padding: 0; }
-          @media screen and (min-width: 767px) {
-            .trainings main .container div ul {
-              font-size: 20px; } }
-          @media screen and (min-width: 992px) {
-            .trainings main .container div ul {
-              font-size: 20px; } }
-          @media screen and (min-width: 1200px) {
-            .trainings main .container div ul {
-              font-size: 20px; } }
-          .trainings main .container div ul li {
-            font-family: "Oswald", sans-serif;
-            letter-spacing: 2px;
-            font-size: 20px;
-            padding: 0 0 0 25px;
-            margin: 0 0 15px 0;
-            background: url("../img/sport.png") 0 3px no-repeat;
-            background-size: 15px; }
-          .trainings main .container div ul li:last-child {
-            background: url("../img/balance.png") left no-repeat;
-            background-size: 15px; }
-          .trainings main .container div ul li:first-child {
-            background: url("../img/run.png") left no-repeat;
-            background-size: 15px; }
-        .trainings main .container div ul:last-child {
-          padding: 5px 15px 0 15px; }
-        .trainings main .container div .remover {
-          position: absolute;
-          top: 35px;
-          right: 0;
-          width: 30px;
-          height: 30px;
-          -webkit-transition: background-color 0.3s ease;
-          transition: background-color 0.3s ease;
-          -webkit-box-shadow: 0px 0px 5px black, inset 0 0 0 black;
-                  box-shadow: 0px 0px 5px black, inset 0 0 0 black;
-          -webkit-transition: -webkit-box-shadow 0.06s ease-in;
-          transition: -webkit-box-shadow 0.06s ease-in;
-          transition: box-shadow 0.06s ease-in;
-          transition: box-shadow 0.06s ease-in, -webkit-box-shadow 0.06s ease-in; }
-          .trainings main .container div .remover:hover {
-            background-color: #fff; }
-            .trainings main .container div .remover:hover::before {
-              width: 25px;
-              left: 0.5px; }
-            .trainings main .container div .remover:hover::after {
-              width: 25px;
-              left: 0.5px; }
-          .trainings main .container div .remover:active {
-            -webkit-box-shadow: 0 0 0 black, inset 0px 0px 5px black;
-                    box-shadow: 0 0 0 black, inset 0px 0px 5px black; }
-        .trainings main .container div .remover:after {
-          content: "";
-          width: 20px;
-          height: 4px;
-          background-color: #91703f;
-          position: absolute;
-          left: 3px;
-          bottom: 11px;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
-        .trainings main .container div .remover:before {
-          content: "";
-          width: 20px;
-          height: 4px;
-          background-color: #91703f;
-          position: absolute;
-          left: 3px;
-          top: 11px;
-          -webkit-transform: rotate(45deg);
-                  transform: rotate(45deg); }
-        .trainings main .container div .remover:before, .trainings main .container div .remover:after {
-          -webkit-transition: width 0.06s ease-in, left 0.06s ease-in;
-          transition: width 0.06s ease-in, left 0.06s ease-in; }
-      .trainings main .container div:last-child {
-        margin: 15px 15px; }
-        @media screen and (min-width: 1200px) {
-          .trainings main .container div:last-child {
-            margin: 15px auto 15px; } }
-      .trainings main .container div.active ul, .trainings main .container div.active .remover {
-        display: block; }
-  .trainings footer {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    background-color: #7FB5B5;
-    border-top: 1px solid #000; }
-    .trainings footer .container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      padding: 15px; }
-      .trainings footer .container img {
-        max-width: 100%; }
-      .trainings footer .container ul:last-child {
-        text-align: right; }
-
+          padding: 0 0 0 25px;
+          margin: 0 0 15px 0;
+          background: url("../img/sport.png") 0 3px no-repeat;
+          background-size: 15px; }
+        main .mainContainer div ul li:last-child {
+          background: url("../img/balance.png") left no-repeat;
+          background-size: 15px; }
+        main .mainContainer div ul li:first-child {
+          background: url("../img/run.png") left no-repeat;
+          background-size: 15px; }
+      main .mainContainer div ul:last-child {
+        padding: 5px 15px 0 15px; }
+      main .mainContainer div .remover {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        -webkit-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+        -webkit-box-shadow: 0px 0px 5px black, inset 0 0 0 black;
+                box-shadow: 0px 0px 5px black, inset 0 0 0 black;
+        -webkit-transition: -webkit-box-shadow 0.06s ease-in;
+        transition: -webkit-box-shadow 0.06s ease-in;
+        transition: box-shadow 0.06s ease-in;
+        transition: box-shadow 0.06s ease-in, -webkit-box-shadow 0.06s ease-in; }
+        main .mainContainer div .remover:hover {
+          background-color: #fff; }
+          main .mainContainer div .remover:hover::before {
+            width: 25px;
+            left: 0.5px; }
+          main .mainContainer div .remover:hover::after {
+            width: 25px;
+            left: 0.5px; }
+        main .mainContainer div .remover:active {
+          -webkit-box-shadow: 0 0 0 black, inset 0px 0px 5px black;
+                  box-shadow: 0 0 0 black, inset 0px 0px 5px black; }
+      main .mainContainer div .remover:after {
+        content: "";
+        width: 20px;
+        height: 4px;
+        background-color: #91703f;
+        position: absolute;
+        left: 3px;
+        bottom: 11px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+      main .mainContainer div .remover:before {
+        content: "";
+        width: 20px;
+        height: 4px;
+        background-color: #91703f;
+        position: absolute;
+        left: 3px;
+        top: 11px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      main .mainContainer div .remover:before, main .mainContainer div .remover:after {
+        -webkit-transition: width 0.06s ease-in, left 0.06s ease-in;
+        transition: width 0.06s ease-in, left 0.06s ease-in; }
+    main .mainContainer div:last-child {
+      margin: 15px 15px; }
+      @media screen and (min-width: 1200px) {
+        main .mainContainer div:last-child {
+          margin: 15px auto 15px; } }
+    main .mainContainer div.active ul, main .mainContainer div.active .remover {
+      display: block; }
 /*# sourceMappingURL=style.css.map */

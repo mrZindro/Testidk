@@ -1,5 +1,6 @@
 'use strict';
 
+
 let now = new Date; // today date
 let bgMenu = document.querySelector('.burger')
 bgMenu.addEventListener('click', burgerMenu, true);
@@ -8,7 +9,7 @@ function burgerMenu () {
     bgMenu.classList.toggle('active');
 }
 
-let mainContainer = document.querySelector('main .container');
+let mainContainer = document.querySelector('main .mainContainer');
 mainContainer.addEventListener('click', change, false);
 
 
@@ -53,7 +54,7 @@ function change(e) {
     e.stopPropagation();
 }
 
-let days = document.querySelectorAll('main .container h2');
+let days = document.querySelectorAll('main .mainContainer h2');
 days[now.getDay()-1].parentNode.classList.toggle('active');
 days[now.getDay()-1].classList.toggle('active');
 days[now.getDay()-1].style.backgroundColor = '#8DB600';
@@ -61,3 +62,5 @@ days[now.getDay()-1].style.backgroundColor = '#8DB600';
 document.querySelector('.time').textContent = 
     `Сегодня ${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}
     , ${days[now.getDay()-1].textContent}`;
+
+
